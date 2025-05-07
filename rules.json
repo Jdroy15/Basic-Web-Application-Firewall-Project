@@ -1,0 +1,13 @@
+{
+  "blocked_ips": ["123.45.67.89", "192.168.0.10"],
+  "patterns": [
+    "union select",
+    "<script>",
+    "1=1",
+    "' OR '1'='1",
+    "drop table",
+    "--",
+    "sleep\\(",
+    "benchmark\\("
+  ]
+}
