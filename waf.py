@@ -16,7 +16,15 @@ TARGET_APP = "http://localhost:5000"  # Actual web app
 @app.before_request
 def waf_filter():
     client_ip = request.remote_addr
-    full_request = str(request.path) + str(request.args) + str(request.data) + str(request.headers)
+
+    full_request = (
+        request.path +
+        str(request.args) +
+        request.get_data(as_text=True) +
+        str(request.form) +
+        str(dict(request.headers))
+    )
+    print(">>> FULL REQUEST DATA:", full_request)
 
     # Block by IP
     if client_ip in rules["blocked_ips"]:
