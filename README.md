@@ -7,8 +7,8 @@ This project is a custom Web Application Firewall (WAF) built using Python and F
 ## 🚀 Features
 
 - ✅ Detects and blocks common web attacks (XSS, SQLi, etc.)
-- 🔄 Self-updates threat detection rules from external threat feeds
-- 🔍 Logs all blocked and forwarded requests
+- 🔄 Self-updates threat detection rules from external threat feeds (pending)
+- 🔍 Logs all blocked and forwarded requests (pending)
 - 🧪 Runs locally for testing 
 
 ---
