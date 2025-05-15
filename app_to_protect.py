@@ -2,7 +2,7 @@
 from flask import Flask, request
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET'],['POST'])
 def home():
     return "Protected App: Home Page"
 
